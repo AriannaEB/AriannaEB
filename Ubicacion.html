@@ -1,0 +1,500 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Empresa Turistica </title>
+
+    <meta charset="UTF-8">
+
+    <!--Mapa Link-->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXvodJ1BTbGIVjYsnBe7cEXVUPgnM5Nus" type="text/javascript"></script>
+    <style>
+        #Canvas {
+            width: 30%;
+            height: 50%;
+            position: absolute;
+            top: 30%;
+            left: 20%;
+        }
+    </style>
+
+    <script src="js/jquery-2.2.3.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery.dataTables.js"></script>
+    <script src="js/dataTables.responsive.min.js"></script>
+    <script src="js/blockUI.js"></script>
+    <script src="js/html2canvas.js"></script>
+    <script src="js/cantonesdistritos.js"></script>
+
+
+    <!--Link para el jquery-- >
+                 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+     <!--Links del data tables-->
+    <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+
+    <!--LinkS Boostrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!--Links para los JS-->
+    <script src="js/creadordetabla.js"></script>
+    <script src="js/Clases.js"></script>
+
+    <!--Links Fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/v4-shims.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="icon" href="./assets/img/logo_fijo_2.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!--===============================================================================================-->
+    <!--=============================================================================================== -->
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/bootstrap/js/popper.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/tilt/tilt.jquery.min.js"></script>
+    <script>
+        $('.js-tilt').tilt({
+            scale: 1.1
+        })
+    </script>
+    <!--===============================================================================================-->
+    <script src="js/main.js"></script>
+
+</head>
+<body>
+   
+
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <div class="login100-pic js-tilt" data-tilt>
+                    <img src="images/Ecology_Isometric.svg" />
+                </div>
+
+
+
+                <div class="login100-form validate-form">
+                    <span class="login100-form-title">
+                        Ubicacion
+                    </span>
+
+                    <div class="wrap-input100 validate-input">
+                        <input class="input100" type="text" id="Id_ubicacion" placeholder="Id_ubicacion">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zM8 17H5V7h3zm2 0H9V7h1zm2 0h-1V7h1zm4 0h-3V7h3zm3 0h-2V7h2z"></path></svg>
+                        </span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input">
+                        <input class="input100" type="text" id="Descripccion" placeholder="Descripccion">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M11.42 21.815a1.004 1.004 0 0 0 1.16 0C12.884 21.598 20.029 16.44 20 10c0-4.411-3.589-8-8-8S4 5.589 4 9.996c-.029 6.444 7.116 11.602 7.42 11.819zM12 4c3.309 0 6 2.691 6 6.004.021 4.438-4.388 8.423-6 9.731-1.611-1.308-6.021-5.293-6-9.735 0-3.309 2.691-6 6-6z"></path><path d="M11 14h2v-3h3V9h-3V6h-2v3H8v2h3z"></path></svg>
+                        </span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input">
+                        <input class="input100" type="text" id="Latitud" placeholder="Latitud" disabled>
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M11.42 21.815a1.004 1.004 0 0 0 1.16 0C12.884 21.598 20.029 16.44 20 10c0-4.411-3.589-8-8-8S4 5.589 4 9.996c-.029 6.444 7.116 11.602 7.42 11.819zM12 4c3.309 0 6 2.691 6 6.004.021 4.438-4.388 8.423-6 9.731-1.611-1.308-6.021-5.293-6-9.735 0-3.309 2.691-6 6-6z"></path><path d="M11 14h2v-3h3V9h-3V6h-2v3H8v2h3z"></path></svg>
+                        </span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input">
+                        <input class="input100" type="text" id="Longitud" placeholder="Longitud" disabled>
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M11.42 21.815a1.004 1.004 0 0 0 1.16 0C12.884 21.598 20.029 16.44 20 10c0-4.411-3.589-8-8-8S4 5.589 4 9.996c-.029 6.444 7.116 11.602 7.42 11.819zM12 4c3.309 0 6 2.691 6 6.004.021 4.438-4.388 8.423-6 9.731-1.611-1.308-6.021-5.293-6-9.735 0-3.309 2.691-6 6-6z"></path><path d="M11 14h2v-3h3V9h-3V6h-2v3H8v2h3z"></path></svg>
+                        </span>
+                    </div>
+
+                    <div class="mapa">
+
+                        <div id='Canvas'> </div>
+                        <input type="button" class="login100-form-btn" onclick="posicionactual()" value="Seleccionar">
+                    </div>
+
+                    <div class="container-login100-form-btn">
+                        <input type="button" class="login100-form-btn" onclick="guardar()" value="Guardar">
+
+                    </div>
+
+                </div><!--Fin del formulario-->
+            </div>
+        </div>
+    </div>
+
+
+    <table id="tablaubicacion">
+        <!--ID de la tabla de muestra-->
+        <thead>
+            <tr>
+
+                <th>
+                    ID_ubicacion <!--Titulo de la columna provincia-->
+                </th>
+                <th>
+                    Descrpcion <!--Titulo de la columna canton-->
+                </th>
+                <th>
+                    Latitud<!--Titulo de la columna distrito-->
+                </th>
+                <th>
+                    Longitud <!--Titulo de la columna barrio-->
+                </th>
+
+            </tr>
+        </thead>
+
+        <!--id para rellenar la tabla con los valores-->
+        <tbody id="tablaubicacionbody">
+        </tbody>
+    </table>
+
+
+
+    <script>
+
+        var geocoder = new google.maps.Geocoder();
+
+
+
+        function geocodePosition(pos) {
+            geocoder.geocode({
+                latLng: pos
+            }, function (responses) {
+                if (responses && responses.length > 0) {
+                    updateMarkerAddress(responses[0].formatted_address);
+                } else {
+                    updateMarkerAddress('Cannot determine address at this location.');
+                }
+            });
+        }
+        //function muestramapa() {
+        //    $("#wrapcanvas").css('visibility', 'visible');
+        //    //$("#btnguardar").css('visibility', 'visible');
+        //}
+        //function salirdelmapa() {
+        //    $("#wrapcanvas").css('visibility', 'collapse');
+        //}
+        //function updateMarkerStatus(str) {
+        //    document.getElementById('markerStatus').innerHTML = str;
+        //}
+
+        function updateMarkerPosition(latLng) {
+            document.getElementById('info').innerHTML = "<spam id='Latitud'>" + latLng.lat() + " </spam > <spam id='Longitud'>" + latLng.lng() + " </spam>";
+        }
+
+        //function updateMarkerAddress(str) {
+        //    //document.getElementById('address').innerHTML = str;
+        //}
+        var markers = [];
+        var latLng = new google.maps.LatLng(10.286011294524934, -84.82088523483276);
+        var map = new google.maps.Map(document.getElementById('Canvas'), {
+            zoom: 12,
+            center: latLng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
+        var latLng = new google.maps.LatLng(10.286011294524934, -84.82088523483276);
+
+        var marker = new google.maps.Marker({
+            position: latLng,
+            title: 'Ubicacion Selecionada',
+            map: map,
+            draggable: true
+        });
+        markers.push(marker);
+
+
+        function posicionactual() {
+
+            var Lat = (markers[0].position.lat());
+            var Long = (markers[0].position.lng());
+
+            document.getElementById("Longitud").value = Lat;
+            document.getElementById("Latitud").value = Long;
+
+
+
+
+
+        }
+        // Update current position info.
+        //updateMarkerPosition(latLng);
+        //geocodePosition(latLng);
+
+        //// Add dragging event listeners.
+        //google.maps.event.addListener(marker, 'dragstart', function () {
+        //    updateMarkerAddress('Dragging...');
+        //});
+
+        //google.maps.event.addListener(marker, 'drag', function () {
+        //    updateMarkerStatus('Dragging...');
+        //    updateMarkerPosition(marker.getPosition());
+        //});
+
+        //google.maps.event.addListener(marker, 'dragend', function () {
+        //    updateMarkerStatus('Drag ended');
+        //    geocodePosition(marker.getPosition());
+        //});
+        //google.maps.event.addDomListener(window, 'load', initialize);
+
+        function cargatodosconflictos() {
+
+            var persona = new Object();
+            persona.op = "listar";
+            $('#Canvas').block({
+                message: '<h4>Cargando...</h4><img src="/img/cargando5.gif" style="width:25%;height:25%;" />',
+
+
+            });
+            persona.idusuariovalidado = JSON.parse(localStorage.getItem("USUARIOLOGUEADO"))._CEDULA;
+            persona.nombreusuario = JSON.parse(localStorage.getItem("USUARIOLOGUEADO"))._NOMBREDEUSUARIO;
+            //A CONTINUACION SE EJECUTA UNA PETICION TIPO AJAX, AL SERVIDOR RESPECTICVO DE LA APLICACION, TODA PETICION DE ESTE SISTEMA ESPECIFICO
+            //TRABAJA CON EL VERBO POST DEL PROTOCOLO HTTP, Y ENVIA DATOS MEDIANTE UN OBJETO JSON QUE SERAN INTERPRETADOS EN EL BACK-END, CONTROLLER
+            //ESPECIFICO SEGUN LA URL DE ESTA PETICION, GENERALMENTE EL ATRIBUTO "op" DEL OBJETO JSON ESPECIFICA CUAL METODO DEL CONTROLER EJECUTAR
+            //ALGUNAS PETICIONES AJAX ESPERAN DATOS DESDE EL BACK-END, LOS CUALES SON PROCESADOS DESTRO DE LA OPCION "success" DE LA PETICION, LA MAYORIA SON LISTADOS
+            //QUE PUEDEN RELLENA RUNA TABLA ESPECIFICA DEL HTML Y OTROS SE GUARDAN EN "COOKIES" PARA SU POSTERIOR USO
+
+            if (JSON.parse(localStorage.getItem("CONFLICTOSENREPORTE")) == null) {
+                $.ajax({
+                    url: '/api/CONFLICTO',
+
+                    type: 'POST',
+                    dataType: 'json',
+                    data: persona,
+                    success: function (data, textStatus, xhr) {
+                        if (data.length > 0) {
+
+                            for (var ele in data) {
+                                if (data[ele]._ESTADO != '99') {
+                                    var latLng = new google.maps.LatLng(data[ele]._EJEX, data[ele]._EJEY);
+                                    var contentString = "<h4>" + data[ele]._NOMBRE + "</h4>";
+                                    var latlngbounds = new google.maps.LatLngBounds();
+                                    var infoWindow = new google.maps.InfoWindow();
+                                    if (data[ele]._SEMAFORO == 1) {
+                                    }
+                                    if (data[ele]._SEMAFORO == 2) {
+                                        var pinColor = "FFFF99";
+                                    }
+                                    if (data[ele]._SEMAFORO == 3) {
+                                        var pinColor = "33CC33";
+                                    }
+                                    if (data[ele]._SEMAFORO == 4) {
+                                        var pinColor = "572364";
+                                    }
+
+                                    var pinImage = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + pinColor,
+                                        new google.maps.Size(21, 34),
+                                        new google.maps.Point(0, 0),
+                                        new google.maps.Point(10, 34));
+                                    var pinShadow = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_shadow",
+                                        new google.maps.Size(40, 37),
+                                        new google.maps.Point(0, 0),
+                                        new google.maps.Point(12, 35));
+
+
+                                    var marker = new google.maps.Marker({
+                                        position: latLng,
+                                        title: String(data[ele]._ID),
+                                        map: map,
+                                        draggable: true,
+                                        id: data[ele]._ID,
+                                        icon: pinImage,
+                                        shadow: pinShadow
+                                    });
+                                    var id = data[ele]._ID;
+                                    (function (marker, id) {
+                                        google.maps.event.addListener(marker, "click", function (e) {
+                                            cargadatos(id);
+                                        });
+                                    })(marker, id);
+                                    (function (marker, contentString) {
+                                        google.maps.event.addListener(marker, "mouseover", function (e) {
+
+
+
+                                            infoWindow.setContent(contentString);
+                                            infoWindow.open(map, marker);
+                                        });
+
+
+
+                                    })(marker, contentString);
+
+                                    latlngbounds.extend(marker.position);
+
+
+                                    google.maps.event.addListener(marker, "mouseout", function (e) {
+                                        infowindow.close();
+                                    });
+
+
+                                    // Update current position info.
+                                    // updateMarkerPosition(latLng);
+                                    //geocodePosition(latLng);
+
+
+                                }
+                            }
+                        }
+                        else {
+                            //$('#tabla').dataTable({
+
+                            //    "language": {
+                            //        "lengthMenu": "Muestra _MENU_ registros por pagina",
+                            //        "zeroRecords": "Nada para mostrar",
+                            //        "info": "Mostrando pagina  _PAGE_ de _PAGES_",
+                            //        "infoEmpty": "Sin registros",
+                            //        "infoFiltered": "(filtrado de _MAX_ registros totales)"
+                            //    },
+                            //    "responsive": true,
+                            //    "paging": true,
+                            //    "lengthMenu": [[5, 10, 15, -1], [5, 10, 15, "All"]],
+                            //    dom: 'Bfrtip',
+                            //    buttons: [
+                            //        'print'
+                            //    ]
+                            //});
+                        }
+                        $('#Canvas').unblock();
+                    },
+                    error: function (xhr, textStatus, errorThrown) {
+                        alert(xhr);
+                    }
+                });
+            }
+            else {
+                for (var ele in JSON.parse(localStorage.getItem("CONFLICTOSENREPORTE"))) {
+                    var latLng = new google.maps.LatLng(JSON.parse(localStorage.getItem("CONFLICTOSENREPORTE"))[ele]._EJEX, JSON.parse(localStorage.getItem("CONFLICTOSENREPORTE"))[ele]._EJEY);
+                    var contentString = "<h4>" + JSON.parse(localStorage.getItem("CONFLICTOSENREPORTE"))[ele]._NOMBRE + "</h4>";
+                    var latlngbounds = new google.maps.LatLngBounds();
+                    var infoWindow = new google.maps.InfoWindow();
+                    if (JSON.parse(localStorage.getItem("CONFLICTOSENREPORTE"))[ele]._SEMAFORO == 1) {
+                        var pinColor = "FE7569";
+                    }
+                    if (JSON.parse(localStorage.getItem("CONFLICTOSENREPORTE"))[ele]._SEMAFORO == 2) {
+                        var pinColor = "FFFF99";
+                    }
+                    if (JSON.parse(localStorage.getItem("CONFLICTOSENREPORTE"))[ele]._SEMAFORO == 3) {
+                        var pinColor = "33CC33";
+                    }
+
+
+                    var pinImage = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + pinColor,
+                        new google.maps.Size(21, 34),
+                        new google.maps.Point(0, 0),
+                        new google.maps.Point(10, 34));
+                    var pinShadow = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_shadow",
+                        new google.maps.Size(40, 37),
+                        new google.maps.Point(0, 0),
+                        new google.maps.Point(12, 35));
+
+
+                    var marker = new google.maps.Marker({
+                        position: latLng,
+                        title: String(JSON.parse(localStorage.getItem("CONFLICTOSENREPORTE"))[ele]._ID),
+                        map: map,
+                        draggable: true,
+                        id: JSON.parse(localStorage.getItem("CONFLICTOSENREPORTE"))[ele]._ID,
+                        icon: pinImage,
+                        shadow: pinShadow
+                    });
+                    var id = JSON.parse(localStorage.getItem("CONFLICTOSENREPORTE"))[ele]._ID;
+                    (function (marker, id) {
+                        google.maps.event.addListener(marker, "click", function (e) {
+                            cargadatos(id);
+                        });
+                    })(marker, id);
+                    (function (marker, contentString) {
+                        google.maps.event.addListener(marker, "mouseover", function (e) {
+
+
+
+                            infoWindow.setContent(contentString);
+                            infoWindow.open(map, marker);
+                        });
+
+
+
+                    })(marker, contentString);
+
+                    latlngbounds.extend(marker.position);
+
+
+                    google.maps.event.addListener(marker, "mouseout", function (e) {
+                        infowindow.close();
+                    });
+
+                    $('#Canvas').unblock();
+                    // Update current position info.
+                    // updateMarkerPosition(latLng);
+                    //geocodePosition(latLng);
+
+                }
+            }
+        }
+        function cargadatos(uno) {
+
+            localStorage.setItem("conflictoresumen", uno);
+            window.open('conflictoconalertasyrespuestas.html');
+
+        }
+
+
+        function guardar() {
+
+            var ubicacioninstanciado =
+
+                new _Ubicacion(
+                    document.getElementById("Id_ubicacion").value,
+                    document.getElementById("Descripccion").value,
+                    document.getElementById("Latitud").value,
+                    document.getElementById("Longitud").value);
+            ubicacioninstanciado.Guardar("api/Ubicacion", recuperar);
+
+        }
+
+        var recuperar = function () { //Variable recuperar y su funcion relacionada//
+
+            document.getElementById("tablaubicacionbody").innerHTML = ""; //toma el IDde la tabla de relleno//
+            var ubicacioninstanciado = new _Ubicacion(); //llama a la variable de ubicacioninstanciado y le asocia la clase del clase.js//
+            ubicacioninstanciado.Seleccionartodos("api/Ubicacion", function (vector) { //llama al seleccionar todos de la clase ubicacion y llama al vector de la funcion//
+                vectorglobal = vector;
+                for (var ele in vector) { //Busca una variable del vector objetos//
+                    document.getElementById("tablaubicacionbody").innerHTML += //Toma la tabla y empieza a rellenarla//
+                        "<tr><td>"
+                        + vector[ele].Id_ubicacion + "</td><td>" //Rellena el campo de provincia con lo del input//
+                        + vector[ele].Descripccion + "</td><td>" //Rellena el campo de Canton con lo del input//
+                        + vector[ele].Latitud + "</td><td>" //Rellena el campo de Distrito con lo del input//
+                        + vector[ele].Longitud //Rellena el campo del ID con lo del input//
+
+                        + "</td></tr>";
+                }
+                $('#tablaubicacion').DataTable(); //Agrega estilos del Data tables a ;a tabla con el ID indicado//
+
+            });
+
+        }
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>

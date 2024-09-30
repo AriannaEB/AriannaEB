@@ -1,0 +1,47 @@
+.parallax::before{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    content: "";
+    background-image: url(../img/parallax.jpg);
+}
+
+div.contador{
+    position: relative;
+    height: auto;
+}
+
+ul.resumen-evento{
+    margin-top: 100px;
+    position: relative;
+    padding: 70px 0;
+}
+
+ul.resumen-evento li{
+    width: 50%;
+    float: right;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-size: 2em;
+    list-style: none;
+}
+
+p.numero{
+    color: rgb(255, 255, 255);
+    font-size: 1,4em;
+    display: block;
+    margin: 0 0 10px 0;
+}
+
+@media(min-width:780px){
+    ul.resumen-evento li{
+        width: 25%;
+    }
+}

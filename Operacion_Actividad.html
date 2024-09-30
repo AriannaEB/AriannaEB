@@ -1,0 +1,274 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Empresa Turistica </title>
+    <meta charset="UTF-8">
+    <!--Link para el jquery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <!--Links del data tables-->
+    <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+
+    <!--LinkS Boostrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!--Links para los JS-->
+    <script src="js/creadordetabla.js"></script>
+    <script src="js/Clases.js"></script>
+
+    <!--Links Fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/v4-shims.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="icon" href="./assets/img/logo_fijo_2.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!--===============================================================================================-->
+    <!--=============================================================================================== -->
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/bootstrap/js/popper.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/tilt/tilt.jquery.min.js"></script>
+    <script>
+        $('.js-tilt').tilt({
+            scale: 1.1
+        })
+    </script>
+    <!--===============================================================================================-->
+    <script src="js/main.js"></script>
+</head>
+<body>
+
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <div class="login100-pic js-tilt" data-tilt>
+                    <img src="images/Ecology_Isometric.svg">
+                </div>
+
+                <div class="login100-form validate-form">
+                    <span class="login100-form-title">
+                        Operacion Actividad
+                    </span>
+
+                    <div class="wrap-input100 validate-input">
+                        <input class="input100" type="text" id="Id_Operacion_Actividad" placeholder="Id_Operacion_Actividad">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zM8 17H5V7h3zm2 0H9V7h1zm2 0h-1V7h1zm4 0h-3V7h3zm3 0h-2V7h2z"></path></svg>
+                        </span>
+                    </div>
+
+                    <div class="col">
+                        <div class="accordion" id="accordionubi">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneubi" aria-expanded="true" aria-controls="collapseOne">
+                                        Seleccione el Turismo
+                                    </button>
+                                </h2>
+                                <div id="collapseOneubi" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <div id="espaciotablaturismo"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <center><h9>Aspecto temático  como eje principal</h9></center>
+                    <div class="wrap-input100 validate-input">
+                        <input class="input100" type="text" id="Aspecto_Tematico" placeholder="Del 1 al 5">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M11.42 21.815a1.004 1.004 0 0 0 1.16 0C12.884 21.598 20.029 16.44 20 10c0-4.411-3.589-8-8-8S4 5.589 4 9.996c-.029 6.444 7.116 11.602 7.42 11.819zM12 4c3.309 0 6 2.691 6 6.004.021 4.438-4.388 8.423-6 9.731-1.611-1.308-6.021-5.293-6-9.735 0-3.309 2.691-6 6-6z"></path><path d="M11 14h2v-3h3V9h-3V6h-2v3H8v2h3z"></path></svg>
+                        </span>
+                    </div>
+
+                    <center><h9>Rodeado de atractivos turísticos competitivos</h9></center>
+                    <div class="wrap-input100 validate-input">
+                        <input class="input100" type="text" id="Promueve_Rodeado_Atractivos_Turisticos_Competitivos" placeholder="Del 1 al 5">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M12 22s8.029-5.56 8-12c0-4.411-3.589-8-8-8S4 5.589 4 9.995C3.971 16.44 11.696 21.784 12 22zM8 9h3V6h2v3h3v2h-3v3h-2v-3H8V9z"></path></svg>
+                        </span>
+                    </div>
+
+                    <center><h9>Información y Seguridad al Turista</h9></center>
+                    <div class="wrap-input100 validate-input">
+                        <input class="input100" type="text" id="DISPOSICIONES_GENERALES_INFORMACION_SEGURIDAD_TURISTA1" placeholder="Del 1 al 5">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M12 22s8.029-5.56 8-12c0-4.411-3.589-8-8-8S4 5.589 4 9.995C3.971 16.44 11.696 21.784 12 22zM8 9h3V6h2v3h3v2h-3v3h-2v-3H8V9z"></path></svg>
+                        </span>
+                    </div>
+
+                    <center><h9>Servicios varios y de información general</h9></center>
+                    <div class="wrap-input100 validate-input">
+                        <input class="input100" type="text" id="CORTINAS_VENTANAS_1" placeholder="Del 1 al 5">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M12 22s8.029-5.56 8-12c0-4.411-3.589-8-8-8S4 5.589 4 9.995C3.971 16.44 11.696 21.784 12 22zM8 9h3V6h2v3h3v2h-3v3h-2v-3H8V9z"></path></svg>
+                        </span>
+                    </div>
+
+                    <center><h9>Equipo de comunicación de los guías</h9></center>
+                    <div class="wrap-input100 validate-input">
+                        <input class="input100" type="text" id="EQUIPO_COMUNICACION_GUIAS1" placeholder="Del 1 al 5">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M12 22s8.029-5.56 8-12c0-4.411-3.589-8-8-8S4 5.589 4 9.995C3.971 16.44 11.696 21.784 12 22zM8 9h3V6h2v3h3v2h-3v3h-2v-3H8V9z"></path></svg>
+                        </span>
+                    </div>
+
+                    <center><h9>Equipo especializado para el desarrollo de sus programas</h9></center>
+                    <div class="wrap-input100 validate-input">
+                        <input class="input100" type="text" id="EQUIPO_ESPECIALIZADO_DESARROLLO_DE_PROGRAMAS1" placeholder="Del 1 al 5">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M12 22s8.029-5.56 8-12c0-4.411-3.589-8-8-8S4 5.589 4 9.995C3.971 16.44 11.696 21.784 12 22zM8 9h3V6h2v3h3v2h-3v3h-2v-3H8V9z"></path></svg>
+                        </span>
+                    </div>
+
+
+                    <center><h9>Local para la venta de recuerdos y artesanías</h9></center>
+                    <div class="wrap-input100 validate-input">
+                        <input class="input100" type="text" id="LOCAL_PARA_VENTA_RECUERDOS_ARTESANIAS1" placeholder="Del 1 al 5">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M12 22s8.029-5.56 8-12c0-4.411-3.589-8-8-8S4 5.589 4 9.995C3.971 16.44 11.696 21.784 12 22zM8 9h3V6h2v3h3v2h-3v3h-2v-3H8V9z"></path></svg>
+                        </span>
+                    </div>
+
+
+                    <div class="container-login100-form-btn">
+                        <input type="button" class="login100-form-btn" onclick="guardar()" value="Guardar">
+
+                    </div>
+
+                </div><!--Fin del formulario-->
+            </div>
+        </div>
+    </div>
+
+    <!--<table id="tablapersona">
+        <thead>
+            <tr>
+                <th>
+                    Nombre Empresa
+                </th>
+                <th>
+                    Activiad
+                </th>
+                <th>
+                    Tipo
+                </th>
+                <th>
+                    Id Ubicacion
+                </th>
+                <th>
+                    Modificar
+                </th>
+                <th>
+                    Eliminar
+                </th>
+            </tr>
+        </thead>
+        <tbody id="tablapersonabody">
+        </tbody>
+    </table>-->
+
+    <script>
+        function guardar() {
+
+            var ubicacioninstanciado =
+
+                new _Operacion_Actividad(
+                    document.getElementById("Id_Operacion_Actividad").value,
+                    JSON.parse(localStorage.getItem("tablaturismo")),
+                    document.getElementById("Aspecto_Tematico").value,
+                    document.getElementById("Promueve_Rodeado_Atractivos_Turisticos_Competitivos").value,
+                    document.getElementById("DISPOSICIONES_GENERALES_INFORMACION_SEGURIDAD_TURISTA1").value,
+                    document.getElementById("CORTINAS_VENTANAS_1").value,
+                    document.getElementById("EQUIPO_COMUNICACION_GUIAS1").value,
+                    document.getElementById("EQUIPO_ESPECIALIZADO_DESARROLLO_DE_PROGRAMAS1").value,
+                    document.getElementById("LOCAL_PARA_VENTA_RECUERDOS_ARTESANIAS1").value);
+
+            ubicacioninstanciado.Guardar("api/Operacion_Actividad");
+
+        }
+
+        //var vectorglobal = [];
+
+
+        //var recuperar = function () {
+        //    document.getElementById("tablapersonabody").innerHTML = "";
+        //    var personainstanciado = new _Empresa();
+        //    personainstanciado.Seleccionartodos("api/Empresa", function (vector) {
+        //        vectorglobal = vector;
+
+        //        for (var ele in vector) {
+        //            document.getElementById("tablapersonabody").innerHTML +=
+        //                "<tr><td>" + vector[ele].Nombre_empresa
+        //                + "</td><td>" + vector[ele].Id_ubicacion.Id_ubicacion
+        //                + "</td><td>" + vector[ele].Tipo
+        //                + "</td><td>" + vector[ele].Actividad
+        //                + "</td><td><input type='button' value= 'Modificar' onclick='modificar(\"" + ele + "\")' /></td><td><input type='button' value= 'Eliminar' onclick='eliminar(\"" + vector[ele].Nombre_empresa + "\")' /></td></tr>";
+        //        }
+        //        $('#tablapersona').DataTable();
+
+        //    });
+
+
+
+
+        //}
+        //recuperar();
+
+
+
+        var ubicaiconobj = new _Turismo_Tematico()
+        ubicaiconobj.Seleccionartodos('api/Turismo_Tematico', function (data) {
+
+            devuelve_tabla(data, "tablaturismo", document.getElementById("espaciotablaturismo"));
+
+
+        })
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

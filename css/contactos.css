@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
+#contacto{
+    margin: 0px;
+    padding: 0px; 
+}
+
+#contacto .forms_father{
+   align-items: center;
+   background-color: rgb(201, 246, 194);
+   margin-bottom: 20px;
+
+}
+
+#contacto .caja{
+    width: 200px;
+    height: 5px;
+    position: relative;
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+#contacto .caja p{
+   text-align: center;
+}
+
+
+#contacto .caja h1{
+    font-family: 'Pangolin', cursive;
+}
+
+#contacto .caja img{
+    border-radius: 20%;
+    width: 80px;
+    height: 80px;
+    margin-left: 60px;
+}
+
+#contacto  .forms form{
+    position: relative;
+    width: 800px;
+    margin-left: 300px;
+    margin-top: 10px;
+    height: auto;
+    background: #40bf55;
+    padding: 10px;
+}
+
+#contacto .forms #nombre{
+    width: 100%;
+    height: 30px;
+}
+#contacto .forms #email{
+    width: 100%;
+    height: 30px;
+}
+
+#contacto .forms #textarea{
+    width: 100%;
+    margin: auto;
+    margin-top: 5px;
+}
+
+#contacto .forms #button{
+    width: 100%;
+    height: 36px;
+    background: #fff;
+}
+
